@@ -20,7 +20,7 @@ class Graph<T> {
 
     addEdge(source: T, destination: T): void {
         const sourceNode = this.nodes.get(source);
-        const destinationNode = this.nodes.get(source);
+        const destinationNode = this.nodes.get(destination);
 
         if (sourceNode) {
             sourceNode.addNeighbor(destinationNode);
