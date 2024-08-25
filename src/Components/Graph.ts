@@ -28,6 +28,30 @@ class Graph<T> {
             console.error("ERROR: Source node is not defined");
         }
     }
+
+    private dfsHelper(node: Node<T>, visited: Set<T>): void {
+        if (!node) return;
+
+        visited.add(node.data);
+
+        console.log(node.data);
+
+        node.adjNodes.forEach(neighbor => {
+            if (!visited.has(neighbor.data)) {
+                this.dfsHelper(neighbor, visited);
+            }
+        });
+    }
+
+    dfs(): void {
+        const visitedNodes: Set<T> = new Set();
+
+        this.nodes.forEach(node => {
+            if (!visitedNodes.has(node.data)) {
+                this.dfsHelper(node, visitedNodes);
+            }
+        });
+    }
 }
 
 export { Graph }
