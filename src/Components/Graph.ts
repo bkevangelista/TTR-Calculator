@@ -4,7 +4,7 @@ class Graph<T> {
     nodes: Map<T, Node<T>> = new Map<T, Node<T>>;
 
     constructor(data: T) {
-        this.root = new Node<T>(data);
+        this.root = this.addNode(data);
     }
     
     addNode(data: T): Node<T> {
@@ -20,7 +20,10 @@ class Graph<T> {
 
     addEdge(source: T, destination: T): void {
         const sourceNode = this.nodes.get(source);
-        const destinationNode = this.nodes.get(destination);
+        const destinationNode = this.nodes.get(destination)!;
+
+        console.log(`Source ${JSON.stringify(sourceNode)}`);
+        console.log(`Destination ${JSON.stringify(destinationNode)}`);
 
         if (sourceNode) {
             sourceNode.addNeighbor(destinationNode);

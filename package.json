@@ -8,5 +8,8 @@
     "start": "tsc src/index.ts && node src/index.js"
   },
   "author": "Melinda Chhu, Branden Evangelista",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.5.0"
+  }
 }
