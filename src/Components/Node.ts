@@ -9,7 +9,7 @@ class Node<T> {
 
     addNeighbor(node: Node<T>) : void {
         this.adjNodes.push(node);
-        console.log(`in addNeighbor: ${JSON.stringify(this.data)}, ${JSON.stringify(this.adjNodes)}`);
+        // console.log(`in addNeighbor: ${JSON.stringify(this.data)}, ${JSON.stringify(this.adjNodes)}`);
     }
 }
 
