@@ -28,13 +28,10 @@ class Graph {
         const sourceNode = this.nodes.get(source);
         const destinationNode = this.nodes.get(destination)!;
 
-        // console.log(`Source ${JSON.stringify(sourceNode)}`);
-        // console.log(`Destination ${JSON.stringify(destinationNode)}`);
-
         if (sourceNode) {
-            const cities: Set<City> = new Set();
-            cities.add(sourceNode.data);
-            cities.add(destinationNode.data);
+            const cities: City[] = [];
+            cities.push(sourceNode.data);
+            cities.push(destinationNode.data);
             const edge = new Edge(
                 cities,
                 color,
