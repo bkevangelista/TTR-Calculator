@@ -3,6 +3,7 @@ import { City } from "../Constants/City";
 import { Color } from "src/Constants/Color";
 import { Edge } from "./Edge";
 import { Pair } from "./Pair";
+
 class Player {
     pieces: number = NUM_PIECES;
     points: number = 0;
