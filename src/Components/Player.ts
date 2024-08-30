@@ -1,6 +1,6 @@
 import { NUM_PIECES, PIECES_TO_POINTS } from "../Constants/GeneralConstants";
 import { City } from "../Constants/City";
-import { Color } from "src/Constants/Color";
+import { Color } from "../Constants/Color";
 import { Edge } from "./Edge";
 import { Pair } from "./Pair";
 
