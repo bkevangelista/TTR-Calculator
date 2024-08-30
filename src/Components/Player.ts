@@ -9,7 +9,7 @@ class Player {
     points: number = 0;
     edges: Map<Pair<City, City>, Edge> = new Map<Pair<City, City>, Edge>;
 
-    addEdgeForPlayer(color: Color, weight: number, fromCity: City, toCity: City): void {
+    addEdgeForPlayer(fromCity: City, toCity: City, weight: number, color: Color): void {
         this.pieces -= weight;
         this.points += PIECES_TO_POINTS?.[weight] || 0;
 
